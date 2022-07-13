@@ -1,0 +1,8 @@
+D:\C#\EnumApp\EnumApp\bin\Debug\EnumApp.exe.config
+D:\C#\EnumApp\EnumApp\bin\Debug\EnumApp.exe
+D:\C#\EnumApp\EnumApp\bin\Debug\EnumApp.pdb
+D:\C#\EnumApp\EnumApp\obj\Debug\EnumApp.csproj.AssemblyReference.cache
+D:\C#\EnumApp\EnumApp\obj\Debug\EnumApp.csproj.SuggestedBindingRedirects.cache
+D:\C#\EnumApp\EnumApp\obj\Debug\EnumApp.csproj.CoreCompileInputs.cache
+D:\C#\EnumApp\EnumApp\obj\Debug\EnumApp.exe
+D:\C#\EnumApp\EnumApp\obj\Debug\EnumApp.pdb
