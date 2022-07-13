@@ -8,39 +8,28 @@ namespace EnumApp
 {
     public static class CommandHandler
     {
-        public enum CommandType
-        {
-            None = 0,
-            Stop = 10,
-            Insert = 20,
-            Update = 30,
-            Delete = 40,
-            Get = 50,
-            GetAll = 60,
-            Help = 70
-        }
-        public static int GetCommandType(string insertString)
+        public static CommandType GetCommandType(string insertString)
         {
             string userString = insertString.Trim(' ').ToLower();
             int[] values = GetValues();
             switch (userString)
             {
                 case "stop":
-                    return values[1];
+                    return CommandType.Stop;
                 case "insert":
-                    return values[2];
+                    return CommandType.Insert;
                 case "update":
-                    return values[3];
+                    return CommandType.Update;
                 case "delete":
-                    return values[4];
+                    return CommandType.Delete;
                 case "get":
-                    return values[5];
+                    return CommandType.Get;
                 case "getall":
-                    return values[6];
+                    return CommandType.GetAll;
                 case "help":
-                    return values[7];
+                    return CommandType.Help;
                 default:
-                    return values[0];
+                    return CommandType.None;
             }
         }
         private static int[] GetValues()
