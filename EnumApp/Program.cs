@@ -22,10 +22,22 @@ namespace EnumApp
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите команду: ");
-            string test = Console.ReadLine();
-            Console.WriteLine(CommandHandler.GetCommandType(test));
+            GetCommand();
             Console.ReadKey();
+        }
+
+        static void GetCommand()
+        {
+            var counter = true;
+            while (counter)
+            {
+                Console.Write("Введите команду: ");
+                string test = Console.ReadLine();
+                var ch = CommandHandler.GetCommandType(test);
+                if (ch == CommandType.Stop)
+                    counter = false;
+                Console.WriteLine(ch);
+            }
         }
     }
 }

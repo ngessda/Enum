@@ -10,38 +10,35 @@ namespace EnumApp
     {
         public static CommandType GetCommandType(string insertString)
         {
-            string userString = insertString.Trim(' ').ToLower();
-            int[] values = GetValues();
+            string userString = insertString.Trim().ToLower();
+            CommandType commandType = CommandType.None;
             switch (userString)
             {
                 case "stop":
-                    return CommandType.Stop;
+                    commandType = CommandType.Stop;
+                    break;
                 case "insert":
-                    return CommandType.Insert;
+                    commandType = CommandType.Insert;
+                    break;
                 case "update":
-                    return CommandType.Update;
+                    commandType = CommandType.Update;
+                    break;
                 case "delete":
-                    return CommandType.Delete;
+                    commandType = CommandType.Delete;
+                    break;
                 case "get":
-                    return CommandType.Get;
+                    commandType = CommandType.Get;
+                    break;
                 case "getall":
-                    return CommandType.GetAll;
+                    commandType = CommandType.GetAll;
+                    break;
                 case "help":
-                    return CommandType.Help;
+                    commandType = CommandType.Help;
+                    break;
                 default:
-                    return CommandType.None;
+                    break;
             }
-        }
-        private static int[] GetValues()
-        {
-            int[] values = new int[8];
-            int counter = 0;
-            foreach (int i in Enum.GetValues(typeof(CommandType)))
-            {
-                values[counter] = i;
-                counter++;
-            }
-            return values;
+            return commandType;
         }
     }
 }
